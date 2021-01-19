@@ -944,9 +944,9 @@ namespace BL
             {
                 throw new ArgumentException("DayOfTreatment > 20000!!!");
             }
-            if (bus.KmForRefueling > 1200)
+            if (bus.KmForRefueling >  1200)
             {
-                throw new ArgumentException("Refueling > 1200!!!");
+                throw new ArgumentException("Refueling > 1200!!!") ;
             }
         }
     }
