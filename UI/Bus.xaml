@@ -1,0 +1,26 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        xmlns:BO="clr-namespace:BO;assembly=BL" x:Class="UI.Bus"
+        mc:Ignorable="d"
+        Title="Bus" Height="450" Width="800">
+
+    <Grid>
+        <DataGrid x:Name="busBODataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="8,0,3.333,4.667" ItemsSource="{Binding}" EnableRowVirtualization="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="license_numberColumn" Width="SizeToHeader" Header="License number" Binding="{Binding License_number}"/>
+                <DataGridTextColumn x:Name="startDateColumn" Width="SizeToHeader" Header="Start Date" Binding="{Binding StartDate}"/>
+                <DataGridTextColumn x:Name="isAvailableColumn" Width="SizeToHeader" Header="Is Available" Binding="{Binding IsAvailable}"/>
+                <DataGridTextColumn x:Name="kmForRefuelingColumn" Width="SizeToHeader" Header="Km For Refueling" Binding="{Binding KmForRefueling}"/>
+                <DataGridTextColumn x:Name="kmForTreatmentColumn" Width="SizeToHeader" Header="Km For Treatment" Binding="{Binding KmForTreatment}"/>
+                <DataGridTextColumn x:Name="dayOfTreatmentColumn" Width="SizeToHeader" Header="Day Of Treatment" Binding="{Binding DayOfTreatment}"/>
+                <DataGridTextColumn x:Name="statusColumn" Width="SizeToHeader" Header="Status" Binding="{Binding Status}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+    
+</Window>
